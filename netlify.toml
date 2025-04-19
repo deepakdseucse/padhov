@@ -1,0 +1,13 @@
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+[build.environment]
+  NODE_VERSION = "20"
+  GO_VERSION = ""
+
+[plugins]
+  # Disable Go plugin since it's not needed
+  [[plugins]]
+    package = "@netlify/plugin-golang"
+    enabled = false
